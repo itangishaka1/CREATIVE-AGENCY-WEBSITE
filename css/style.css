@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,700&display=swap");
 
+:root{
+    --primary-color: #52006a;
+    --secondary-color:#cd113b;
+    --light-color:#ff7600;
+    --last-color:#ffa900
+}
+
+/* BASE STYLE */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -29,16 +37,19 @@ section{
     padding: 100px;
 }
 
+/* BUTTON */
 .btn {
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    background: #f60f20;
+    background:var(--light-color);
     color: #fff;
     border-radius: 10px;
     padding: 10px 30px;
     margin: 20px 0;
+    border: 0;
 }
+
 
 .btn:hover{
     transform: scale(.98);
@@ -50,10 +61,96 @@ section{
     left: 100px;
     font-size: 2rem;
     font-weight: 700;
-    z-index: 10;
+    z-index: 200;
 
 }
 
+/* TOGGLE */
+.toggle-icon{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--light-color) url(../images/menu.png);
+    /* cannot see it because it is behind the image */
+    z-index: 20;
+    /* looks weird */
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.toggle-icon.active{
+    background: var(--light-color) url(../images/close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* NAVIGATION */
+.navigation{
+    position: fixed;
+    left: 100%; /*pushing it off the screen 100%*/
+    /* to take up the entire screen */
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation.active{
+    left: 0;
+}
+
+.navigation ul{
+    position: relative;
+}
+
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+
+.navigation ul li a{
+    font-size: 2.2rem;
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.navigation ul li a:hover{
+    color: var(--primary-color);
+}
+
+.navigation .social-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation .social-bar a{
+    display: inline-block;
+    transform: scale(.5);
+}
+
+.navigation .email-icon{
+    position: absolute;
+    bottom: 20px;
+    transform: scale(.5);
+}
+
+/* HOMEPAGE */
 .home-content{
     z-index: 10;
     max-width: 600px;
@@ -68,6 +165,23 @@ section{
 
 }
 
-.navigation{
-    display: none;
+
+@media(max-width:1068px){
+    .home-img{
+        display: none;
+    }
+
+    .logo{
+        top: 10px;
+        left: 40px;
+        font-size: 1.5rem;
+    }
+
+    section{
+        padding: 100px 40px;
+    }
+
+    .navigation ul li a{
+        font-size: 2rem;
+    }
 }
