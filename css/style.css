@@ -1,10 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,700&display=swap");
 
 :root{
-    --primary-color: #52006a;
-    --secondary-color:#cd113b;
-    --light-color:#ff7600;
-    --last-color:#ffa900
+    --light-color:#ff7600;  
 }
 
 /* BASE STYLE */
@@ -83,7 +80,7 @@ section{
 }
 
 .toggle-icon.active{
-    background: var(--light-color) url(../images/close.png);
+    background:var(--light-color)  url(../images/close.png);
     background-size: 25px;
     background-position: center;
     background-repeat: no-repeat;
@@ -119,13 +116,14 @@ section{
 
 .navigation ul li a{
     font-size: 2.2rem;
-    color: var(--light-color);
+    color: black;
     text-decoration: none;
     font-weight: 300;
 }
 
 .navigation ul li a:hover{
-    color: var(--primary-color);
+    color: var(--light-color);
+    font-weight: bold;
 }
 
 .navigation .social-bar {
