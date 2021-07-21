@@ -184,7 +184,7 @@ section.home {
 
 .services .service {
   padding: 30px;
-  background: rgb(252, 81, 133, 0.1) ;
+  /* background: rgb(252, 81, 133, 0.1) ; */
   box-shadow: 0 10px 30px rgba(201, 174, 182, 0.9);
 }
 
